@@ -1,0 +1,166 @@
+\documentclass[a4paper, norsk, 12pt]{extarticle}
+\usepackage[T1]{fontenc} % Vise norske tegn
+\usepackage[latin1]{inputenc} % For å kunne skrive norske tegn
+\usepackage{babel} % Tilpasning til norsk
+\usepackage{graphicx} % For å inkludere grafikk
+\usepackage{amsmath,amssymb} % Ekstra matematikkfunksjoner
+\usepackage{titlesec}
+
+\usepackage[margin=.9in, includefoot]{geometry}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{relsize}
+\usepackage{booktabs}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{Oblig1b - 2017}
+\fancyhead[C]{MAT121}
+\fancyhead[R]{Magnus Øian}
+\usepackage{pdfpages}
+
+
+\titleformat{\section}{\center \normalfont \Large \bfseries}
+{Oppgave\ \thesection}{2.3ex plus .2ex}{}
+\titlespacing{\subsection}{2em}{*1}{*5}
+
+
+
+\begin{document}
+
+%Oppgave 1
+\section{}
+Løsningene av likningssystemet er gitt ved den augmenterte matrisen: 
+\begin{align} \label{eqn: oppg1}
+		\begin{bmatrix}  1 & 2 & 2 & 1 \\  0 & 1 & 1 & 1 \\ 0 & 1 & -2 & -1 \\ 2 & 2 & a & 0  \end{bmatrix}  
+	\sim  \begin{bmatrix}  1 & 2 & 2 & 1 \\  0 & 1 & 1 & 1 \\ 0 & 0 & -3 & -2 \\ 0 & -2 & a-4 & -2  \end{bmatrix}
+	\sim  \begin{bmatrix}  1 & 0 & 0 & -1 \\  0 & 1 & 0 & 1/3 \\ 0 & 0 & 1 & 2/3 \\ 0 & 0 & 0 & 2(2-a)/3  \end{bmatrix}
+\end{align}
+
+\begin{itemize}
+%1a)
+\item[a)]
+Ved å la $a \neq 2$ får vi en rad på formen $ \begin{bmatrix} 0 & 0 & 0 & b \end{bmatrix}$ hvor $ b \neq 0 $. Altså har likningssystemet ingen løsning.
+
+\item[b)]
+Systemet har ingen frie variabler. Ved å la $a = 2$ har vi ikke en rekke på formen $ \begin{bmatrix} 0 & 0 & 0 & b \end{bmatrix} $ med $b \neq 0$, og følgelig har likningssystemet kun én løsning.
+
+\item[c)]
+Ingen verdier av $a$ gjør at likningssystemet har uendelig mange løsninger ettersom det ikke har frie variabler.
+
+\item[d)]
+Fra \eqref{eqn: oppg1} ser vi for $a=2$ at likningssystemet har løsningene $x_1 = 1$, $x_2 = 1/3$ og $x_3 = 2/3$.
+
+\end{itemize}
+
+
+% Oppgave 2
+\section{}
+\begin{itemize}
+
+% 2a)
+\item[a)]
+$\mathbf{b} \in \text{Span} \{\mathbf{v_1},...,\mathbf{v_n}\}$ dersom $\mathbf{b}$ er en lineær kombinasjon av $\{\mathbf{v_1},...,\mathbf{v_n}\}$.
+
+% 2b)
+\item[b)]
+\begin{align*}
+    3\mathbf{v_1} &= 3 \cdot \begin{bmatrix}  1 \\  0 \\ 1  \end{bmatrix} = \begin{bmatrix} 3 \\ 0 \\ 3  \end{bmatrix}    
+         \text{  og  }
+    (-1)\mathbf{v_1} = - \begin{bmatrix}  1 \\  0 \\ 1  \end{bmatrix}  = \begin{bmatrix} -1 \\ 0 \\ -1 \end{bmatrix}
+\end{align*}
+
+% 2c) 
+\item[c)]
+\begin{align*}
+    0 \cdot \mathbf{v_1} + 0 \cdot \mathbf{v_2} &= \mathbf{0} \text{, } \quad
+    0 \cdot \mathbf{v_1} + 1 \cdot \mathbf{v_2} = \begin{bmatrix}  0 \\  0 \\ 0  \end{bmatrix} + \begin{bmatrix}  0 \\  2 \\ -1  \end{bmatrix}  = \begin{bmatrix}  0 \\  2 \\ -1  \end{bmatrix} \text{,  } \\
+    1 \cdot \mathbf{v_1} + 1 \cdot \mathbf{v_2} &= \begin{bmatrix}  1 \\  0 \\ 1  \end{bmatrix}  + \begin{bmatrix}  0 \\  2 \\ -1  \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix} \quad \text {og} \quad
+    2 \cdot \mathbf{v_1} + 2 \cdot \mathbf{v_2} = \begin{bmatrix}  2 \\  0 \\ 2  \end{bmatrix}  + \begin{bmatrix}  0 \\  4 \\ -2  \end{bmatrix} = \begin{bmatrix} 2 \\ 4 \\ 0 \end{bmatrix}     
+\end{align*}
+	
+\end{itemize}
+
+% Oppgave 3
+\section{}
+
+\begin{itemize}
+
+% 3a)
+\item[a)]
+Vektorene $\{\mathbf{v_1}, ..., \mathbf{v_p}\}$ er lineært uavhengige dersom ingen av vektorene er en multippel av noen av de andre vektorene.
+% 3b)
+\item[b)]
+Minst én av vektorene $\{\mathbf{v_1}, ..., \mathbf{v_p}\}$ er en multippel av de andre vektorene.
+% 3c)
+\item[c)]
+Eksempel på $4$ uavhengige vektorer i $\mathbb{R}^4$:
+\begin{align*}
+\begin{bmatrix}  1 \\  0 \\ 0 \\ 0  \end{bmatrix}, \begin{bmatrix}  0 \\  1 \\ 0 \\ 0  \end{bmatrix}, \begin{bmatrix}  0 \\  0 \\ 1 \\ 0  \end{bmatrix} \text{ og }\begin{bmatrix}  0 \\  0 \\ 0 \\ 1  \end{bmatrix}.
+\end{align*}
+Vektorene har verdi ulik null i ulike rader og vil dermed ikke kunne uttrykkes som en multippel av de andre vektorene (vektorene til identitetsmatrisen $I_4$).
+\end{itemize}
+
+
+% Oppgave 4
+\section{}
+\begin{itemize}
+%4a)
+\item[a)]
+Fra-mengde: $\mathbb{R}^3$, til-mengde: $\mathbb{R}^2$.
+
+%4b)
+\item[b)]
+La $\boldsymbol{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix}$ og $\boldsymbol{v} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix}$ være vektorer i $\mathbb{R}^3$ og $c$ og $d$ skalarer. Da har vi at 
+\begin{align*} 
+T(c \boldsymbol{u} + d \boldsymbol{v}) = T\left(c \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} + d \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}\right)
+&= T\left(\begin{bmatrix} cu_1 + dv_1 \\ cu_2 + dv_2 \\ cu_3 + dv_3 \end{bmatrix} \right) \\ &= \begin{bmatrix} 3(cu_1 + dv_1) + 2(cu_2 + dv_2)  \\ -(cu_2 + dv_2) + cu_3 + dv_3\end{bmatrix}
+\end{align*}
+\begin{align*}
+cT( \boldsymbol{u}) +  d T(\boldsymbol{v}) = c T\left(\begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \right) + d T\left(\begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}\right)
+= c \begin{bmatrix} 3u_1 + 2u_2 \\ -u_2 + u_3 \end{bmatrix} + d \begin{bmatrix} 3v_1 + 2v_2 \\ -v_2 + v_3 \end{bmatrix} \\ = \begin{bmatrix} 3(cu_1 + dv_1) + 2(cu_2 + dv_2)  \\ -(cu_2 + dv_2) + cu_3 + dv_3\end{bmatrix}
+\end{align*}
+Vi har vist at $T(c \boldsymbol{u} + d \boldsymbol{v}) = cT( \boldsymbol{u}) +  d T(\boldsymbol{v})$. Transformasjonen $T$ er dermed per definisjon lineær.
+
+%4c)
+\item[c)]
+Vi har at
+\begin{align*}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = x_1 \begin{bmatrix} 1 \\0 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 0\\1\\0 \end{bmatrix}
++ x_3 \begin{bmatrix} 0 \\0 \\ 1 \end{bmatrix}.
+\end{align*}
+La
+\begin{align*}
+\boldsymbol{\ell_1} = \begin{bmatrix} 1 \\0 \\ 0 \end{bmatrix}, \boldsymbol{\ell_2} \begin{bmatrix} 0\\1\\0 \end{bmatrix} 
+\text{ og } \boldsymbol{\ell_3} = \begin{bmatrix} 0 \\0 \\ 1 \end{bmatrix}.
+\end{align*}
+Det gir at
+\begin{align*}
+T\left( \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \right) &= T\left(x_1 \boldsymbol{\ell_1} + x_2 \boldsymbol{\ell_2} + x_3 \boldsymbol{\ell_3}\right) 
+= x_1T\left(\boldsymbol{\ell_1} \right) + x_2 T\left(\boldsymbol{\ell_2} \right) + x_3 T\left(\boldsymbol{\ell_3} \right) \\
+&= x_1\begin{bmatrix} 3 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 2 \\ -1 \end{bmatrix} + x_3 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 3 & 2 & 0 \\ 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}.
+\end{align*}
+Standardmatrisen til $T$ er altså gitt ved:
+\begin{align} \label{eqn: standard}
+\begin{bmatrix} 3 & 2 & 0 \\ 0 & -1 & 1 \end{bmatrix}.
+\end{align}
+%4d)
+\item[d)]
+La $A$ være matrisen \eqref{eqn: standard}. Reduserer den augmenterte matrisen $\begin{bmatrix} A & \boldsymbol{b} \end{bmatrix}$:
+\begin{align} \label{eqn: redusert}
+	\begin{bmatrix} 3 & 2 & 0 & b_1\\ 0 & -1 & 1 & b_2 \end{bmatrix} 
+\sim \begin{bmatrix} 3 & 0 & 2 & b_1 + 2b_2 \\ 0 & 1 & -1 & - b_2 \end{bmatrix}
+\sim \begin{bmatrix} 1 & 0 & 2/3 & 1/3(b_1 + 2b_2) \\ 0 & 1 & -1 & - b_2 \end{bmatrix}.
+\end{align}
+Vi ser at \eqref{eqn: redusert} har én fri variabel og ingen rad på formen $\begin{bmatrix} 0 & 0 & 0 & c\end{bmatrix}$ med $c \neq 0$. Det gir at:
+\begin{itemize}
+\item Likningen $T(\boldsymbol{x}) = \boldsymbol{b}$ har løsning for hver $\boldsymbol{b} \in \mathbb{R}^2$, og $T$ er dermed på.
+\item Likningen $T(\boldsymbol{x}) = \boldsymbol{0}$ har flere enn den trivielle løsningen $\boldsymbol{x} = \boldsymbol{0}$, og $T$ er dermed ikke én-til-én.
+\end{itemize}
+
+
+\end{itemize}
+
+
+\end{document}
