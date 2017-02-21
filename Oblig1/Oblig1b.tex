@@ -6,12 +6,15 @@
 \usepackage{amsmath,amssymb} % Ekstra matematikkfunksjoner
 \usepackage{titlesec}
 
+% Juster sidemarginer
 \usepackage[margin=.9in, includefoot]{geometry}
-\usepackage{adjustbox}
-\usepackage{tabularx}
-\usepackage{relsize}
-\usepackage{booktabs}
 
+% \usepackage{adjustbox}
+% \usepackage{tabularx}
+% \usepackage{relsize}
+% \usepackage{booktabs}
+
+% Topptekst
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[L]{Oblig1b - 2017}
@@ -20,11 +23,11 @@
 \usepackage{pdfpages}
 
 
+% Redefinerer "\section" til "Oppgave n"
+% Nummerering skjer automatisk
 \titleformat{\section}{\center \normalfont \Large \bfseries}
 {Oppgave\ \thesection}{2.3ex plus .2ex}{}
 \titlespacing{\subsection}{2em}{*1}{*5}
-
-
 
 \begin{document}
 
@@ -160,9 +163,10 @@ Standardmatrisen til $T$ er altså gitt ved:
 \begin{align} \label{eqn: standard}
 \begin{bmatrix} 3 & 2 & 0 \\ 0 & -1 & 1 \end{bmatrix}.
 \end{align}
+
 %4d)
 \item[d)]
-La $A$ være matrisen \eqref{eqn: standard}. Reduserer den augmenterte matrisen $\begin{bmatrix} A & \boldsymbol{b} \end{bmatrix}$:
+La $A$ være matrisen \eqref{eqn: standard} og $\boldsymbol{b}$ vektor i $\mathbb{R}^2$. Reduserer den augmenterte matrisen $\begin{bmatrix} A & \boldsymbol{b} \end{bmatrix}$:
 \begin{align} \label{eqn: redusert}
 	\begin{bmatrix} 3 & 2 & 0 & b_1\\ 0 & -1 & 1 & b_2 \end{bmatrix} 
 \sim \begin{bmatrix} 3 & 0 & 2 & b_1 + 2b_2 \\ 0 & 1 & -1 & - b_2 \end{bmatrix}
