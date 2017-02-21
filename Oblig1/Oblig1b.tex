@@ -84,7 +84,15 @@ $\mathbf{b} \in \text{Span} \{\mathbf{v_1},...,\mathbf{v_n}\}$ dersom $\mathbf{b
     1 \cdot \mathbf{v_1} + 1 \cdot \mathbf{v_2} &= \begin{bmatrix}  1 \\  0 \\ 1  \end{bmatrix}  + \begin{bmatrix}  0 \\  2 \\ -1  \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix} \quad \text {og} \quad
     2 \cdot \mathbf{v_1} + 2 \cdot \mathbf{v_2} = \begin{bmatrix}  2 \\  0 \\ 2  \end{bmatrix}  + \begin{bmatrix}  0 \\  4 \\ -2  \end{bmatrix} = \begin{bmatrix} 2 \\ 4 \\ 0 \end{bmatrix}     
 \end{align*}
-	
+
+% 2d)	
+\item[d)]	
+Eksempel på vektor $\mathbf{u} \notin \text{Span} \{\mathbf{v_1}, \mathbf{v_2}\}$: $\mathbf{u} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$. Vi ser av den augmenterte matrisen
+\begin{align*}
+\begin{bmatrix} 1 & 0 & 1 \\ 0 & 2 & 1 \\ 1 & -1 & 1 \end{bmatrix} \sim \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\end{align*}
+at det ikke finnes vekter $c_1$ og $c_2$ slik at $c_1 \mathbf{v_1} + c_2 \mathbf{v_2} = \mathbf{u} $
+ettersom vi har en rad på formen $\begin{bmatrix} 0 & 0 & b \end{bmatrix} $ med $b \neq 0$.
 \end{itemize}
 
 % Oppgave 3
