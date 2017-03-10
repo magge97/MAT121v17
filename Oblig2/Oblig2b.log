@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.28)  10 MAR 2017 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.28)  10 MAR 2017 15:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -394,10 +394,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 47.
 
-<oppg_6.png, id=1, 672.5125pt x 466.74374pt>
-File: oppg_6.png Graphic file (type png)
- <use oppg_6.png>
-Package pdftex.def Info: oppg_6.png used on input line 73.
+<oppg6.png, id=1, 672.5125pt x 466.74374pt>
+File: oppg6.png Graphic file (type png)
+ <use oppg6.png>
+Package pdftex.def Info: oppg6.png used on input line 73.
 (pdftex.def)             Requested size: 284.52618pt x 170.71259pt.
 
 
@@ -408,7 +408,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./oppg_6.png>]
+ <./oppg6.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -418,7 +418,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2] (./Oblig2b.aux) ) 
 Here is how much of TeX's memory you used:
  5291 strings out of 493014
- 72412 string characters out of 6133351
+ 72407 string characters out of 6133351
  156218 words of memory out of 5000000
  8717 multiletter control sequences out of 15000+600000
  14006 words of font info for 44 fonts, out of 8000000 for 9000
